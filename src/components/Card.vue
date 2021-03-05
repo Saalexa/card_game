@@ -8,11 +8,6 @@
 <script>
 export default {
   name: "Card",
-  mounted() {
-    this.$on('cardMatched', function() {
-
-    });
-  },
   props: {
     card: Object,
   },

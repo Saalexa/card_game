@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header></Header>
+    <Header :isplay="isPlay"></Header>
     <Rules v-if="!isPlay"></Rules>
     <Playfield v-else></Playfield>
   </div>
@@ -9,13 +9,15 @@
 <script>
 import Playfield from './components/Playfield.vue'
 import Rules from './components/Rules.vue'
+import Header from './components/Header.vue'
 
 
 export default {
   name: 'App',
   components: {
     Playfield,
-    Rules
+    Rules,
+    Header
   },
   data: () => {
     return {
@@ -26,6 +28,9 @@ export default {
     this.$on('startGame', function() {
       this.isPlay = true;
     });
+  },
+  methods: {
+
   }
 }
 </script>

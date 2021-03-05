@@ -1,23 +1,26 @@
 <template>
   <div class="playfield">
     <div class="startScreen" v-if="!isStarted">
-      <div>Splendex Memory Game</div>
-      <select v-model="deckSize">
-        <option v-for="index in 8" :key="index">{{ index + 2 }}</option>
-      </select>
-      <button @click="startGame()" :disabled="loading">Start new game</button>
+      <div><h1>Splendex Memory Game</h1></div>
+      <div>
+        <p>Deck Size</p>
+        <select v-model="deckSize">
+          <option v-for="index in 8" :key="index">{{ index + 2 }}</option>
+        </select>
+      </div>
+
+      <button class="orangeButton" @click="startGame()" :disabled="loading">Start new game</button>
     </div>
     <div class="gameScreen" v-else>
       <div class="status">
-        <div>Current tries: {{currentStep}}</div>
-        <div>Best: {{bestGame}}</div>
+        <div class="currentTries">Current tries: <span>{{currentStep}}</span></div>
+        <div class="bestStep">Best: <br><span>{{bestGame}}</span></div>
         <div><button @click="restartGame()">Restart</button></div>
       </div>
       <div class="cards">
         <Card v-for="(card, index) in cards" :key="index" :card="card"></Card>
       </div>
     </div>
-
   </div>
 </template>
 

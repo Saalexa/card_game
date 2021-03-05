@@ -8,15 +8,17 @@
   .matched {
     opacity: 0.5;
   }
+  img {
+    height: 150px;
+    width: 150px;
+  }
+  .cardClosed {
+    background-color: #fff;
+  }
 }
 
-.cardClosed {
-  background-color: #fff;
-}
 
-img {
-  height: 150px;
-  width: 150px;
-}
+
+
 
 
