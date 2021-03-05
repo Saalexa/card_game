@@ -1,0 +1,19 @@
+.playfield {
+  .gameScreen {
+    max-width: 800px;
+    margin: auto;
+    .cards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: auto;
+      justify-content: center;
+    }
+    .status {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

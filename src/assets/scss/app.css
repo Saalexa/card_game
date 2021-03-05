@@ -1,0 +1,35 @@
+body {
+  background-color: #f2f2f2; }
+
+.playfield .gameScreen {
+  max-width: 800px;
+  margin: auto; }
+  .playfield .gameScreen .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: auto;
+    justify-content: center; }
+  .playfield .gameScreen .status {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+
+.card {
+  height: 150px;
+  width: 150px;
+  border-radius: 10px; }
+  .card .bgWhite {
+    background-color: #fff; }
+  .card .matched {
+    opacity: 0.5; }
+
+.cardClosed {
+  background-color: #fff; }
+
+img {
+  height: 150px;
+  width: 150px; }
+
+/*# sourceMappingURL=app.css.map */
